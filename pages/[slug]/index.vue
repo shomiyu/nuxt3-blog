@@ -1,11 +1,12 @@
 <script setup>
-const router = useRouter();
-const slug = router.currentRoute.value.params.slug[0];
+const ctx = useRuntimeConfig();
+const route = useRoute();
+const slug = route.params.slug;
 
 const { data: article } = await useFetch(`/blog/${slug}`, {
-  baseURL: "https://eureka.microcms.io/api/v1",
+  baseURL: ctx.baseURL,
   headers: {
-    "X-MICROCMS-API-KEY": "dd786b48c45344139fc3cd04474c2d64e0fb",
+    "X-MICROCMS-API-KEY": ctx.apiKey,
   },
 });
 </script>
