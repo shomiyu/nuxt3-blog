@@ -14,7 +14,7 @@ const { data } = await useFetch("/blog", {
     <h1>Hello, Nuxt3!</h1>
     <ul class="test">
       <li v-for="article in data.contents" :key="article.id">
-        <router-link :to="`/${article.id}`">{{ article.title }}</router-link>
+        <nuxt-link :to="`/${article.id}`">{{ article.title }}</nuxt-link>
       </li>
     </ul>
   </div>
