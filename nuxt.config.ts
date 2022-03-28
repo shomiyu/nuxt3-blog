@@ -23,6 +23,6 @@ export default defineNuxtConfig({
   publicRuntimeConfig: {
     // baseURL: BASE_URL,
     // apiKey: API_KEY,
-    // apiKey: process.env.NODE_ENV !== "production" ? API_KEY : undefined,
+    apiKey: process.env.NODE_ENV !== "production" ? API_KEY : API_KEY,
   },
 });
