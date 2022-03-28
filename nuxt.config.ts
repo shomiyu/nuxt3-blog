@@ -7,11 +7,10 @@ export default defineNuxtConfig({
    */
   css: [],
   privateRuntimeConfig: {
-    baseURL: BASE_URL,
     apiKey: API_KEY,
   },
   publicRuntimeConfig: {
-    baseURL: process.env.NODE_ENV !== "production" ? BASE_URL : undefined,
+    baseURL: BASE_URL,
     apiKey: process.env.NODE_ENV !== "production" ? API_KEY : undefined,
   },
 });
