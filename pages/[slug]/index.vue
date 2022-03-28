@@ -4,10 +4,11 @@ const route = useRoute();
 const slug = route.params.slug;
 
 const { data: article } = await useFetch(`/blog/${slug}`, {
-  baseURL: ctx.baseURL,
+  baseURL: "https://eureka.microcms.io/api/v1",
   headers: {
     "X-MICROCMS-API-KEY": ctx.apiKey,
   },
+  pick: ["id", "title", "publishedAt", "body"],
 });
 </script>
 

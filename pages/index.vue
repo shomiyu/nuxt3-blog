@@ -2,7 +2,7 @@
 const ctx = useRuntimeConfig();
 
 const { data } = await useFetch("/blog", {
-  baseURL: ctx.baseURL,
+  baseURL: "https://eureka.microcms.io/api/v1",
   headers: {
     "X-MICROCMS-API-KEY": ctx.apiKey,
   },
