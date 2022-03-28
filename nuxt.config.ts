@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   /**
    * See: https://v3.nuxtjs.org/docs/directory-structure/nuxt.config#css
    */
+  ssr: true,
   css: [],
   // 最初のやつ
   // privateRuntimeConfig: {
