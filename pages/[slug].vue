@@ -3,6 +3,8 @@ const ctx = useRuntimeConfig();
 const route = useRoute();
 const slug = route.params.slug;
 
+console.log(ctx.apiKey);
+
 const { data: article } = await useFetch(`/blog/${slug}`, {
   baseURL: "https://eureka.microcms.io/api/v1",
   headers: {
