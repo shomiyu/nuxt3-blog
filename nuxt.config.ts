@@ -6,12 +6,12 @@ export default defineNuxtConfig({
    * See: https://v3.nuxtjs.org/docs/directory-structure/nuxt.config#css
    */
   css: [],
-  publicRuntimeConfig: {
-    baseURL: process.env.NODE_ENV !== "production" ? BASE_URL : undefined,
-    apiKey: process.env.NODE_ENV !== "production" ? API_KEY : undefined,
-  },
   privateRuntimeConfig: {
     baseURL: BASE_URL,
     apiKey: API_KEY,
+  },
+  publicRuntimeConfig: {
+    baseURL: process.env.NODE_ENV !== "production" ? BASE_URL : undefined,
+    apiKey: process.env.NODE_ENV !== "production" ? API_KEY : undefined,
   },
 });
