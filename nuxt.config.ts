@@ -5,12 +5,10 @@ export default defineNuxtConfig({
   /**
    * See: https://v3.nuxtjs.org/docs/directory-structure/nuxt.config#css
    */
+  ssr: true,
   css: [],
+  // SSGに未対応のためAPI_KEYはpublicに&GETのみなので見えても問題なし
   publicRuntimeConfig: {
-    baseURL: process.env.NODE_ENV !== "production" ? BASE_URL : undefined,
-    apiKey: process.env.NODE_ENV !== "production" ? API_KEY : undefined,
-  },
-  privateRuntimeConfig: {
     baseURL: BASE_URL,
     apiKey: API_KEY,
   },
