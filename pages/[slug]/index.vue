@@ -8,6 +8,7 @@ const { data: article } = await useFetch(`/blog/${slug}`, {
   headers: {
     "X-MICROCMS-API-KEY": ctx.apiKey,
   },
+  pick: ["publishedAt", "title", "body"],
 });
 </script>
 
