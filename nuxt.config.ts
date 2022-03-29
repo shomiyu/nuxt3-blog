@@ -10,6 +10,8 @@ export default defineNuxtConfig({
   // SSGに未対応のためAPI_KEYはpublicに&GETのみなので見えても問題なし
   publicRuntimeConfig: {
     baseURL: BASE_URL,
+  },
+  privateRuntimeConfig: {
     apiKey: API_KEY,
   },
 });
