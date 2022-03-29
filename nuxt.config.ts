@@ -7,22 +7,9 @@ export default defineNuxtConfig({
    */
   ssr: true,
   css: [],
-  // 最初のやつ
-  // privateRuntimeConfig: {
-  //   apiKey: process.env.NODE_ENV !== "production" ? API_KEY : undefined,
-  // },
-  // publicRuntimeConfig: {
-  //   baseURL: BASE_URL,
-  //   apiKey: API_KEY,
-  // },
-
-  privateRuntimeConfig: {
+  // SSGに未対応のためAPI_KEYはpublicに&GETのみなので見えても問題なし
+  publicRuntimeConfig: {
     baseURL: BASE_URL,
     apiKey: API_KEY,
-  },
-
-  publicRuntimeConfig: {
-    // baseURL: BASE_URL,
-    apiKey: process.env.NODE_ENV !== "production" ? API_KEY : undefined,
   },
 });
